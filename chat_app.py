@@ -96,7 +96,7 @@ if prompt := st.chat_input("What is up?"):
     conn_db.insert_db(session=session,role='user',content=prompt)
     # Display user message in chat message container
     sy.show_prompt(chat_con,'user',prompt)
-    stream,citation = dr_var.get_llm_response(
+    stream = dr_var.get_llm_response(
             input_text=prompt
             )
     # stream = 'test response'
