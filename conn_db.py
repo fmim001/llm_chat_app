@@ -18,7 +18,7 @@ def insert_db(session,role,content):
                 COALESCE((select max(chat_id) from chat_history 
                           where session_name="{session}"),0)+1 ,
                 '{role}',
-               '{content}')
+               '{content.replace("'","''")}')
                ''')
     conn.commit()
 
