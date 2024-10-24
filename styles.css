@@ -1,0 +1,144 @@
+p{
+    color: rgb(13, 13, 13);
+    text-align: justify;
+}
+p1{
+    color: white;
+    text-align: justify;
+    font-weight: bold;
+
+    
+}
+h1{
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 700;
+    color: rgb(31, 32, 32);
+    padding: 1.25rem 0px 1rem;
+    margin: 0px;
+    line-height: 1.2;
+    font-size: 28px;
+}
+.stSelectbox {
+    display: flex;
+    justify-content: center;
+}
+.stSelectbox label{
+    display: none;
+}
+.stButton {
+    display: flex;
+    justify-content: center;
+}
+.stMain {
+    background-color: white;
+}
+.stAppHeader {
+    background-color: #528684;
+    min-height: 10%;
+}
+.st-emotion-cache-6qob1r {
+    background-color: #528684;
+}
+.stVerticalBlock {
+    min-width: 100%;
+}
+.st-emotion-cache-14big3o {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    font-weight: 400;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    min-height: 2.5rem;
+    margin: 0px;
+    line-height: 1.6;
+    color: inherit;
+    width: 274px;
+    user-select: none;
+    background-color: #a7c726;
+    border: 1px solid #528684;
+}
+
+.st-emotion-cache-ocqkz7 {
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    gap: 1rem;
+}
+.st-emotion-cache-arzcut {
+    width: 100%;
+    padding: 1rem 1rem 34px;
+    max-width: 46rem;
+}
+.chat-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.user-message, .assistant-message {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.user-message {
+    justify-content: flex-end; /* Posisi pesan user di kanan */
+}
+
+.assistant-message {
+    justify-content: flex-start; /* Posisi pesan assistant di kiri */
+}
+
+.message {
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 90%;
+    
+}
+.session_title {
+    color:white;
+    display: flex;
+    align-items: center;
+    margin: 0px 0;
+}
+.user-message .message {
+    background-color: #f1f7f5;
+    text-align: right;
+}
+
+.assistant-message .message {
+    background-color: #f1f7f5;
+    text-align: left;
+    min-width: 95%;
+}
+.st-emotion-cache-bho8sy {
+    order: 0;
+}
+.st-emotion-cache-1ghhuty {
+    order: 1;
+}
+.st-emotion-cache-1c7y2kd {
+    display: flex;
+    align-items: flex-start;
+
+}
+.sidebar_container {
+    display: flex;
+    flex-direction: row;
+}
+svg {
+    width: auto;
+    height: auto;
+}
+.custom-path {
+    fill: red; /* Mengubah warna isi (fill) menjadi merah */
+    stroke: black; /* Menambahkan garis pinggir (stroke) berwarna hitam */
+    stroke-width: 2;/* Menambahkan ketebalan garis pinggir */
+}
