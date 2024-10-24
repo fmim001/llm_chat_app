@@ -15,7 +15,8 @@ def insert_db(session,role,content):
     cursor.execute(f'''insert into chat_history (session_name,chat_id,role,content) 
                values 
                ('{session}',
-                COALESCE((select max(chat_id) from chat_history where session_name="{session}"),0)+1 ,
+                COALESCE((select max(chat_id) from chat_history 
+                          where session_name="{session}"),0)+1 ,
                 '{role}',
                '{content}')
                ''')
