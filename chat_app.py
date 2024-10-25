@@ -105,10 +105,10 @@ if prompt := st.chat_input("What is up?",key="prompt"):
     conn_db.insert_db(session=session,role='user',content=prompt)
     # Display user message in chat message container
     sy.show_prompt(chat_con,'user',prompt)
-    # stream = dr_var.get_llm_response(
-    #         input_text=prompt
-    #         )
-    stream = 'test response'
+    stream = dr_var.get_llm_response(
+            input_text=prompt
+            )
+    # stream = 'test response'
     sy.show_prompt(chat_con,'assistant',stream)
     # st.session_state.messages.append({"role": "assistant", "content": stream})
     conn_db.insert_db(session=session,role='assistant',content=stream)
