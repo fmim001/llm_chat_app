@@ -64,13 +64,14 @@ def index_list(list_session,value):
 
 
 side =  st.sidebar
+side.button('new session',
+            on_click=new_session,
+            use_container_width=True,
+            help="Create New Session",
+            key="new_session")
 def zero_session(side):
     global col1,col2
-    side.button('new session',
-                on_click=new_session,
-                use_container_width=True,
-                help="Create New Session",
-                key="new_session")
+
     con1 = side.container(border=True,key="session_option")
     col1,col2 = con1.columns([6,1])
 
