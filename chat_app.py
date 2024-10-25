@@ -17,6 +17,8 @@ if 'selected_option' not in st.session_state:
 if 'title_name' not in st.session_state:
     st.session_state.title_name = 'default session'
 
+if 'my_selectbox' not in st.session_state:
+    st.session_state.my_selectbox = None
 
 if 'list_session' not in st.session_state:    
     st.session_state.list_session = None
