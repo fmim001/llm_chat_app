@@ -9,6 +9,8 @@ import dr_var
 import styles as sy
 import time
 
+
+
 if 'selected_option' not in st.session_state:
     st.session_state.selected_option = None
 
@@ -60,25 +62,32 @@ def index_list(list_session,value):
 
 # st.title(st.session_state.title_name,anchor=False)
 
-with st.sidebar :
-    st.button('new session',on_click=new_session,use_container_width=True,help="Create New Session")
-    con1 = st.container(border=True)
+
+side =  st.sidebar
+def zero_session(side):
+    global col1,col2
+    side.button('new session',
+                on_click=new_session,
+                use_container_width=True,
+                help="Create New Session",
+                key="new_session")
+    con1 = side.container(border=True,key="session_option")
     col1,col2 = con1.columns([6,1])
-    con2 = st.container(border=True)
-    
+
+
+
 
 ref = sy.load_css('styles.css')   
 st.markdown(ref,unsafe_allow_html=True)
 
 # Set a default model
-chat_con = st.container()
-# Display chat messages from history on app rerun
+chat_con = st.container(key="chat_con")
+
 sy.show_history(container=chat_con)
 
 
-
 # Accept user input
-if prompt := st.chat_input("What is up?"):
+if prompt := st.chat_input("What is up?",key="prompt"):
     # Add user message to chat history
     # st.session_state.messages.append({"role": "user", "content": prompt})
     # st.write(conn_db.get_history().session_name.unique().tolist())
@@ -96,15 +105,21 @@ if prompt := st.chat_input("What is up?"):
     conn_db.insert_db(session=session,role='user',content=prompt)
     # Display user message in chat message container
     sy.show_prompt(chat_con,'user',prompt)
-    stream = dr_var.get_llm_response(
-            input_text=prompt
-            )
-    # stream = 'test response'
+    # stream = dr_var.get_llm_response(
+    #         input_text=prompt
+    #         )
+    stream = 'test response'
     sy.show_prompt(chat_con,'assistant',stream)
     # st.session_state.messages.append({"role": "assistant", "content": stream})
     conn_db.insert_db(session=session,role='assistant',content=stream)
 
+if st.session_state.selected_option==None:
+    zero_session(chat_con)
+else:
+    zero_session(side)
+# Display chat messages from history on app rerun
 
+con2 = side.container(key="container_sidebar_title")
 # st.write(st.session_state.selected_option)
 # st.write(selected_option)
 col2.button('x',
@@ -115,6 +130,7 @@ col1.selectbox('Select Session',
                index=None,
                key='my_selectbox',
                on_change=on_select,
-               placeholder="No Session Selected")
+               placeholder="Select Session History")
+con2.header(f'Current Session')
 con2.markdown(f'''<p1>{st.session_state.title_name}</p1>
-    ''', unsafe_allow_html=True,help="Current Avtive session")
+    ''', unsafe_allow_html=True)

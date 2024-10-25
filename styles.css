@@ -2,13 +2,7 @@ p{
     color: rgb(13, 13, 13);
     text-align: justify;
 }
-p1{
-    color: white;
-    text-align: justify;
-    font-weight: bold;
 
-    
-}
 h1{
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 700;
@@ -17,6 +11,15 @@ h1{
     margin: 0px;
     line-height: 1.2;
     font-size: 28px;
+}
+h2{
+    font-family: franklin gothic;
+    text-transform: capitalize;
+    text-align: left;
+    color: rgb(31, 32, 32);
+    padding: 0rem 0px 0rem;
+    margin: 0px;
+    line-height: 1.2;
 }
 .stSelectbox {
     display: flex;
@@ -29,52 +32,69 @@ h1{
     display: flex;
     justify-content: center;
 }
-.stMain {
-    background-color: white;
-}
+
 .stAppHeader {
     background-color: #528684;
     min-height: 10%;
 }
-.st-emotion-cache-6qob1r {
+.stSidebar {
     background-color: #528684;
 }
-.stVerticalBlock {
-    min-width: 100%;
+.st-key-new_session  button{
+    background-color: #A7C726;
+    text-transform: capitalize;
+
 }
-.st-emotion-cache-14big3o {
+.st-key-container_sidebar_title p1{
+    background-color: #769E9D;
     display: inline-flex;
     -webkit-box-align: center;
     align-items: center;
     -webkit-box-pack: center;
     justify-content: center;
-    font-weight: 400;
-    padding: 0.25rem 0.75rem;
+    padding-left:1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
     border-radius: 0.5rem;
-    min-height: 2.5rem;
-    margin: 0px;
+    margin: 2px;
     line-height: 1.6;
     color: inherit;
-    width: 274px;
+    width: 249px;
     user-select: none;
-    background-color: #a7c726;
-    border: 1px solid #528684;
+    border: 1px solid rgba(31, 32, 32, 0.2);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+.st-key-session_option button{
+    background-color: #FFFFFF;
+}
+/* .st-key-session_option .stSelectbox *{
+    background-color: #D0DADB;
+    
+
+} */
+.stMain {
+    background-color: #E0EFEC;
+}
+.stBottom > div {
+    background-color: #E0EFEC;
 }
 
-.st-emotion-cache-ocqkz7 {
+.stVerticalBlock {
+    min-width: 100%;
+}
+.st-key-chat_con {
     display: flex;
-    flex-wrap: wrap;
-    -webkit-box-flex: 1;
-    flex-grow: 1;
-    -webkit-box-align: stretch;
-    align-items: stretch;
-    gap: 1rem;
+    
 }
-.st-emotion-cache-arzcut {
-    width: 100%;
-    padding: 1rem 1rem 34px;
-    max-width: 46rem;
+
+.st-key-prompt{
+    display: flex;
 }
+
+
 .chat-container {
     width: 100%;
     max-width: 600px;
@@ -118,24 +138,19 @@ h1{
     text-align: left;
     min-width: 95%;
 }
-.st-emotion-cache-bho8sy {
-    order: 0;
-}
-.st-emotion-cache-1ghhuty {
-    order: 1;
-}
-.st-emotion-cache-1c7y2kd {
-    display: flex;
-    align-items: flex-start;
 
-}
 .sidebar_container {
     display: flex;
     flex-direction: row;
 }
-svg {
-    width: auto;
-    height: auto;
+.stBottom svg {
+    border-radius: 50%;
+    background-color: #528684;
+    color: white;
+    padding-left: 5px;
+    padding-right: 3px;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 .custom-path {
     fill: red; /* Mengubah warna isi (fill) menjadi merah */
