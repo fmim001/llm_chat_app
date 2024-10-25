@@ -47,7 +47,7 @@ h2{
 }
 .st-key-container_sidebar_title p1{
     background-color: #769E9D;
-    display: inline-flex;
+    display: flex;
     -webkit-box-align: center;
     align-items: center;
     -webkit-box-pack: center;
@@ -60,7 +60,6 @@ h2{
     margin: 2px;
     line-height: 1.6;
     color: inherit;
-    width: 249px;
     user-select: none;
     border: 1px solid rgba(31, 32, 32, 0.2);
     color: white;
