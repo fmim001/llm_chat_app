@@ -86,6 +86,7 @@ h2{
 }
 .st-key-chat_con {
     display: flex;
+    min-height : 400px
     
 }
 
